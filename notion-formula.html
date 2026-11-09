@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ===== PRIMARY SEO ===== -->
+  <title>Notion Formula 2.0 Generator – Free Copy-Paste Formulas | ZeptoSolve</title>
+  <meta name="description" content="Free Notion Formula 2.0 generator by ZeptoSolve. Build date difference, progress bar, countdown, badge and text formulas in seconds, then copy and paste into Notion.">
+  <meta name="keywords" content="Notion formula generator, Notion formula 2.0, Notion progress bar formula, Notion date difference formula, Notion countdown formula, Notion formulas, ZeptoSolve">
+  <meta name="author" content="ZeptoSolve">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#4f46e5">
+  <link rel="canonical" href="https://utilitynest123.github.io/zeptosolve/notion-formula/">
+
+  <!-- ===== OPEN GRAPH / TWITTER ===== -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ZeptoSolve">
+  <meta property="og:title" content="Notion Formula 2.0 Generator – Free Copy-Paste Formulas | ZeptoSolve">
+  <meta property="og:description" content="Generate Notion Formula 2.0 snippets for dates, progress bars, countdowns, badges and text. Free, private, no sign-up.">
+  <meta property="og:url" content="https://utilitynest123.github.io/zeptosolve/notion-formula/">
+  <meta property="og:image" content="https://utilitynest123.github.io/zeptosolve/assets/og-image.png">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Notion Formula 2.0 Generator | ZeptoSolve">
+  <meta name="twitter:description" content="Build Notion formulas in seconds and paste them straight into your database.">
+  <meta name="twitter:image" content="https://utilitynest123.github.io/zeptosolve/assets/og-image.png">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%234f46e5'/%3E%3Cpath d='M28 30h44L34 70h38' stroke='white' stroke-width='9' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+
+  <!-- ===== PERFORMANCE ===== -->
+  <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { fontFamily: { sans: ['system-ui','-apple-system','Segoe UI','Roboto','Helvetica Neue','Arial','sans-serif'], mono: ['ui-monospace','SFMono-Regular','Menlo','Consolas','monospace'] } } }
+    }
+  </script>
+
+  <!-- ===== STRUCTURED DATA ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "name": "Notion Formula 2.0 Generator",
+        "url": "https://utilitynest123.github.io/zeptosolve/notion-formula/",
+        "applicationCategory": "ProductivityApplication",
+        "operatingSystem": "Any (Web Browser)",
+        "description": "Free online generator for Notion Formula 2.0 snippets: date differences, countdowns, progress bars, status badges, text cleanup and relation percentages.",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "publisher": { "@type": "Organization", "name": "ZeptoSolve", "url": "https://utilitynest123.github.io/zeptosolve/" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "ZeptoSolve", "item": "https://utilitynest123.github.io/zeptosolve/" },
+          { "@type": "ListItem", "position": 2, "name": "Notion Formula 2.0 Generator", "item": "https://utilitynest123.github.io/zeptosolve/notion-formula/" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do I add a formula to a Notion database?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Open your database, click the plus icon to add a property, choose Formula as the type, then paste the generated formula into the editor and click Done. Make sure the property names in the formula match your database exactly." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is Notion Formula 2.0?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Formula 2.0 is Notion's current formula language. It supports lists, the let function for variables, and both function style such as dateBetween(a, b, \"days\") and dot style such as a.dateBetween(b, \"days\")." }
+          },
+          {
+            "@type": "Question",
+            "name": "Why does my Notion progress bar show the wrong length?",
+            "acceptedAnswer": { "@type": "Answer", "text": "A Number property formatted as a percent stores 50% as 0.5. If your property holds whole numbers such as 50, choose the 0 to 100 scale in the generator." }
+          },
+          {
+            "@type": "Question",
+            "name": "Does this generator send my data anywhere?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No. The ZeptoSolve generator runs entirely in your browser. It only builds text for you to copy, and it never connects to your Notion workspace." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    .ad-slot { min-height: 90px; }
+    :focus-visible { outline: 3px solid #6366f1; outline-offset: 2px; }
+    .fade-in { animation: fade .2s ease; }
+    @keyframes fade { from { opacity: .4; transform: translateY(2px);} to { opacity: 1; transform: none; } }
+    .code-box { white-space: pre-wrap; word-break: break-word; }
+    input[type=range] { accent-color: #4f46e5; }
+  </style>
+
+  <!-- AdSense Auto/Script Here (add once approved) -->
+  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
+</head>
+
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+  <a href="#generator" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:bg-white focus:px-4 focus:py-2 focus:rounded">Skip to generator</a>
+
+  <!-- ================= HEADER ================= -->
+  <header class="bg-white/90 backdrop-blur border-b border-slate-200 sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="../" class="flex items-center gap-2" aria-label="ZeptoSolve Home">
+        <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-indigo-600 text-white font-extrabold">Z</span>
+        <span class="text-xl font-extrabold tracking-tight text-slate-900">Zepto<span class="text-indigo-600">Solve</span></span>
+      </a>
+      <nav aria-label="Main navigation" class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <a href="./" class="text-indigo-600 font-semibold" aria-current="page">Notion Formulas</a>
+        <a href="../bd-tax-calculator/" class="hover:text-indigo-600">BD Tax Calculator</a>
+        <a href="../digital-detox/" class="hover:text-indigo-600">Digital Detox</a>
+      </nav>
+      <button id="menu-btn" class="md:hidden p-2 rounded-lg hover:bg-slate-100" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <nav id="mobile-menu" class="hidden md:hidden border-t border-slate-200 bg-white px-4 py-3 space-y-2 text-sm font-medium" aria-label="Mobile navigation">
+      <a href="./" class="block py-2 text-indigo-600 font-semibold">Notion Formulas</a>
+      <a href="../bd-tax-calculator/" class="block py-2">BD Tax Calculator</a>
+      <a href="../digital-detox/" class="block py-2">Digital Detox</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ================= INTRO ================= -->
+    <section class="bg-gradient-to-br from-indigo-600 via-indigo-500 to-violet-600 text-white">
+      <div class="max-w-6xl mx-auto px-4 py-10 md:py-14">
+        <nav aria-label="Breadcrumb" class="text-xs text-indigo-100 mb-3">
+          <ol class="flex flex-wrap items-center gap-1">
+            <li><a href="../" class="hover:underline">ZeptoSolve</a></li>
+            <li aria-hidden="true">/</li>
+            <li aria-current="page">Notion Formula 2.0 Generator</li>
+          </ol>
+        </nav>
+        <h1 class="text-3xl md:text-4xl font-extrabold leading-tight">Notion Formula 2.0 Generator</h1>
+        <p class="mt-3 text-indigo-50 max-w-2xl">Pick a formula type, type your property names, and copy a ready-to-paste Notion Formula 2.0 snippet. Date differences, countdowns, progress bars, badges and more. Free and private, it all runs in your browser.</p>
+      </div>
+    </section>
+
+    <!-- AdSense Top Banner Here -->
+    <div class="max-w-6xl mx-auto px-4 mt-6">
+      <div class="ad-slot flex items-center justify-center rounded-lg border border-dashed border-slate-300 bg-slate-100 text-xs text-slate-400" aria-label="Advertisement">
+        <!-- AdSense Top Banner Here (728x90 / responsive) -->
+        <!--
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="0000000001" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        -->
+        Ad Space: Top Banner
+      </div>
+    </div>
+
+    <!-- ================= GENERATOR ================= -->
+    <section id="generator" class="max-w-6xl mx-auto px-4 py-8" aria-labelledby="gen-heading">
+      <h2 id="gen-heading" class="text-xl font-bold text-slate-900">1. Choose a formula type</h2>
+      <div id="tool-tabs" class="mt-3 flex flex-wrap gap-2" role="group" aria-label="Formula types"></div>
+
+      <div class="mt-6 grid gap-6 lg:grid-cols-5">
+
+        <!-- FORM -->
+        <div class="lg:col-span-2 bg-white rounded-2xl border border-slate-200 p-5 md:p-6">
+          <h2 class="text-xl font-bold text-slate-900">2. Fill in your details</h2>
+          <p id="tool-desc" class="mt-1 text-sm text-slate-600"></p>
+          <form id="tool-form" class="mt-5 space-y-4" novalidate autocomplete="off"></form>
+          <p class="mt-4 text-xs text-slate-500">Property names are case-sensitive and must match your Notion database exactly.</p>
+        </div>
+
+        <!-- OUTPUT -->
+        <div class="lg:col-span-3">
+          <div class="space-y-4 lg:sticky lg:top-20">
+            <div class="bg-white rounded-2xl border-2 border-indigo-500 p-5 md:p-6 shadow-sm">
+              <div class="flex items-center justify-between gap-3 flex-wrap">
+                <h2 class="text-xl font-bold text-slate-900">3. Copy your formula</h2>
+                <button type="button" id="copy-btn" class="rounded-xl bg-indigo-600 text-white text-sm font-semibold px-4 py-2 hover:bg-indigo-700">Copy formula</button>
+              </div>
+              <pre id="formula-out" class="code-box font-mono text-sm bg-slate-900 text-emerald-300 rounded-xl p-4 mt-4 overflow-x-auto" aria-live="polite" tabindex="0"></pre>
+              <p id="copy-status" class="text-xs text-indigo-700 mt-2 min-h-[1rem]" role="status"></p>
+
+              <div id="preview-box" class="hidden mt-4 rounded-xl bg-indigo-50 border border-indigo-100 p-4">
+                <p class="text-xs font-semibold uppercase tracking-wide text-indigo-700">Live preview</p>
+                <p id="preview-out" class="mt-1 font-mono text-lg text-slate-900 break-all"></p>
+              </div>
+
+              <div class="mt-4">
+                <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">How it works</p>
+                <p id="explain-out" class="mt-1 text-sm text-slate-700"></p>
+              </div>
+              <div class="mt-3">
+                <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">Notion setup</p>
+                <p id="setup-out" class="mt-1 text-sm text-slate-700"></p>
+              </div>
+            </div>
+
+            <!-- AdSense Sidebar / In-Result Banner Here -->
+            <div class="ad-slot flex items-center justify-center rounded-lg border border-dashed border-slate-300 bg-slate-100 text-xs text-slate-400" style="min-height:250px" aria-label="Advertisement">
+              <!-- AdSense Sidebar Rectangle Here (300x250) -->
+              Ad Space: Result Sidebar
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AdSense Mid-Content Banner Here -->
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="ad-slot flex items-center justify-center rounded-lg border border-dashed border-slate-300 bg-slate-100 text-xs text-slate-400" aria-label="Advertisement">
+        <!-- AdSense Mid-Content Banner Here (responsive / in-article) -->
+        Ad Space: Mid Content
+      </div>
+    </div>
+
+    <!-- ================= ARTICLE ================= -->
+    <article class="max-w-3xl mx-auto px-4 py-12" aria-labelledby="guide-heading">
+      <h2 id="guide-heading" class="text-2xl md:text-3xl font-extrabold text-slate-900">How to Use Notion Formula 2.0 Snippets</h2>
+
+      <div class="mt-4 space-y-4 text-slate-700 leading-relaxed">
+        <p>Notion formulas turn a plain database into a small app. They can show how many days are left before a deadline, draw a progress bar, color a status, or clean up text. The syntax is easy to get wrong, so the ZeptoSolve generator writes it for you. You only supply the names of your properties.</p>
+      </div>
+
+      <h3 class="mt-8 text-xl font-bold text-slate-900">Add a formula in 4 steps</h3>
+      <ol class="mt-3 list-decimal pl-5 space-y-2 text-slate-700">
+        <li>Open your Notion database and click <strong>+</strong> at the end of the property row to add a new property.</li>
+        <li>Choose <strong>Formula</strong> as the property type and give it a name.</li>
+        <li>Pick a formula type above, enter your property names, and press <strong>Copy formula</strong>.</li>
+        <li>Paste it into the Notion formula editor and press <strong>Done</strong>.</li>
+      </ol>
+
+      <h3 class="mt-8 text-xl font-bold text-slate-900">What is Formula 2.0?</h3>
+      <p class="mt-2 text-slate-700 leading-relaxed">Formula 2.0 is the current Notion formula language. It adds lists, variables with <code class="font-mono text-sm bg-slate-100 px-1 rounded">let</code>, and two writing styles that mean the same thing: function style such as <code class="font-mono text-sm bg-slate-100 px-1 rounded">dateBetween(a, b, "days")</code> and dot style such as <code class="font-mono text-sm bg-slate-100 px-1 rounded">a.dateBetween(b, "days")</code>. This generator uses function style because it is easier to read and copy.</p>
+
+      <h3 class="mt-8 text-xl font-bold text-slate-900">Quick reference</h3>
+      <div class="mt-3 overflow-x-auto">
+        <table class="w-full text-sm text-left border border-slate-200 rounded-lg overflow-hidden">
+          <caption class="sr-only">Common Notion Formula 2.0 functions and what they do</caption>
+          <thead class="bg-slate-100 text-xs uppercase text-slate-600">
+            <tr><th scope="col" class="px-3 py-2">Function</th><th scope="col" class="px-3 py-2">What it does</th></tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 bg-white">
+            <tr><td class="px-3 py-2 font-mono">prop("Name")</td><td class="px-3 py-2">Reads the value of a property in the same row.</td></tr>
+            <tr><td class="px-3 py-2 font-mono">dateBetween(a, b, "days")</td><td class="px-3 py-2">Whole number of units from b to a.</td></tr>
+            <tr><td class="px-3 py-2 font-mono">today() / now()</td><td class="px-3 py-2">Current date, or current date and time.</td></tr>
+            <tr><td class="px-3 py-2 font-mono">let(x, value, expression)</td><td class="px-3 py-2">Stores a value in a variable so you can reuse it.</td></tr>
+            <tr><td class="px-3 py-2 font-mono">ifs(c1, v1, c2, v2, else)</td><td class="px-3 py-2">Checks several conditions in order.</td></tr>
+            <tr><td class="px-3 py-2 font-mono">format(number)</td><td class="px-3 py-2">Turns a number into text so you can join it with words.</td></tr>
+            <tr><td class="px-3 py-2 font-mono">formatDate(date, "MMM D")</td><td class="px-3 py-2">Shows a date in the pattern you choose.</td></tr>
+            <tr><td class="px-3 py-2 font-mono">style(text, "b", "green")</td><td class="px-3 py-2">Adds bold, italics or color to formula text.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="mt-8 text-xl font-bold text-slate-900">Common mistakes and fixes</h3>
+      <ul class="mt-2 list-disc pl-5 space-y-2 text-slate-700">
+        <li><strong>Property not found.</strong> Names are case-sensitive. "due date" and "Due Date" are different properties.</li>
+        <li><strong>Progress bar looks empty or full.</strong> A percent-formatted Number property stores 50% as 0.5. If you store 50, pick the 0 to 100 scale.</li>
+        <li><strong>Number plus text error.</strong> Wrap numbers in <code class="font-mono text-sm bg-slate-100 px-1 rounded">format()</code> before joining them with words. The generator already does this.</li>
+        <li><strong>Date formulas give odd results.</strong> Make sure the properties are Date properties, not text.</li>
+        <li><strong>Formula is blank for new rows.</strong> Rows with empty dates return an empty result by design in the countdown formula.</li>
+      </ul>
+
+      <div class="mt-8 rounded-xl border border-indigo-200 bg-indigo-50 p-4 text-sm text-indigo-900" role="note">
+        <strong>Tip:</strong> Notion occasionally updates its formula functions. If a pasted formula shows an error, check the property types first, then consult Notion's official formula reference for the latest syntax.
+      </div>
+    </article>
+
+    <!-- ================= FAQ ================= -->
+    <section class="bg-white border-t border-slate-200" aria-labelledby="faq-heading">
+      <div class="max-w-3xl mx-auto px-4 py-12">
+        <h2 id="faq-heading" class="text-2xl font-extrabold text-slate-900">Frequently Asked Questions</h2>
+        <div class="mt-6 space-y-3">
+          <details class="group rounded-xl border border-slate-200 p-4">
+            <summary class="cursor-pointer font-semibold flex justify-between items-center">How do I add a formula to a Notion database? <span class="text-indigo-600 group-open:rotate-45 transition" aria-hidden="true">+</span></summary>
+            <p class="mt-3 text-slate-600 text-sm">Open your database, click the plus icon to add a property, choose Formula as the type, then paste the generated formula into the editor and click Done. Make sure the property names in the formula match your database exactly.</p>
+          </details>
+          <details class="group rounded-xl border border-slate-200 p-4">
+            <summary class="cursor-pointer font-semibold flex justify-between items-center">What is Notion Formula 2.0? <span class="text-indigo-600 group-open:rotate-45 transition" aria-hidden="true">+</span></summary>
+            <p class="mt-3 text-slate-600 text-sm">Formula 2.0 is Notion's current formula language. It supports lists, the let function for variables, and both function style and dot style syntax.</p>
+          </details>
+          <details class="group rounded-xl border border-slate-200 p-4">
+            <summary class="cursor-pointer font-semibold flex justify-between items-center">Why does my progress bar show the wrong length? <span class="text-indigo-600 group-open:rotate-45 transition" aria-hidden="true">+</span></summary>
+            <p class="mt-3 text-slate-600 text-sm">A Number property formatted as a percent stores 50% as 0.5. If your property holds whole numbers such as 50, choose the 0 to 100 scale in the generator.</p>
+          </details>
+          <details class="group rounded-xl border border-slate-200 p-4">
+            <summary class="cursor-pointer font-semibold flex justify-between items-center">Does this generator send my data anywhere? <span class="text-indigo-600 group-open:rotate-45 transition" aria-hidden="true">+</span></summary>
+            <p class="mt-3 text-slate-600 text-sm">No. The ZeptoSolve generator runs entirely in your browser. It only builds text for you to copy, and it never connects to your Notion workspace.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- More ZeptoSolve tools -->
+    <section class="max-w-6xl mx-auto px-4 py-10" aria-labelledby="more-heading">
+      <h2 id="more-heading" class="text-xl font-extrabold text-slate-900">More free tools from ZeptoSolve</h2>
+      <div class="mt-4 grid gap-4 sm:grid-cols-2">
+        <a href="../bd-tax-calculator/" class="block rounded-xl bg-white border border-slate-200 p-4 hover:border-emerald-400">
+          <p class="font-bold text-slate-900">Bangladesh Income Tax Calculator</p>
+          <p class="text-sm text-slate-600 mt-1">Slab-wise income tax estimate in BDT for AY 2026-27.</p>
+        </a>
+        <a href="../digital-detox/" class="block rounded-xl bg-white border border-slate-200 p-4 hover:border-amber-400">
+          <p class="font-bold text-slate-900">Digital Detox Feature Phone Guide</p>
+          <p class="text-sm text-slate-600 mt-1">Compare feature phones by battery, USB-C and hotspot support.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- AdSense Bottom Banner Here -->
+    <div class="max-w-6xl mx-auto px-4 mb-8">
+      <div class="ad-slot flex items-center justify-center rounded-lg border border-dashed border-slate-300 bg-slate-100 text-xs text-slate-400" aria-label="Advertisement">
+        <!-- AdSense Bottom Banner Here -->
+        Ad Space: Bottom Banner
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-slate-900 text-slate-300">
+    <div class="max-w-6xl mx-auto px-4 py-10 grid gap-8 md:grid-cols-3">
+      <div>
+        <p class="text-xl font-extrabold text-white">Zepto<span class="text-indigo-400">Solve</span></p>
+        <p class="mt-2 text-sm text-slate-400">Free micro-tools that solve small problems fast. Built by ZeptoSolve.</p>
+      </div>
+      <nav aria-label="Footer tools navigation">
+        <p class="font-semibold text-white mb-2">Tools</p>
+        <ul class="space-y-1 text-sm">
+          <li><a class="hover:text-white" href="./">Notion Formula 2.0 Generator</a></li>
+          <li><a class="hover:text-white" href="../bd-tax-calculator/">Bangladesh Tax Calculator</a></li>
+          <li><a class="hover:text-white" href="../digital-detox/">Digital Detox Guide</a></li>
+          <li><a class="hover:text-white" href="../">ZeptoSolve Home</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p class="font-semibold text-white mb-2">Notice</p>
+        <p class="text-sm text-slate-400">ZeptoSolve is an independent tool and is not affiliated with Notion Labs, Inc. Notion is a trademark of its owner.</p>
+      </div>
+    </div>
+    <div class="border-t border-slate-800 text-center text-xs text-slate-500 py-4">
+      &copy; <span id="year">2026</span> ZeptoSolve. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+  (function () {
+    'use strict';
+
+    /* ---------- helpers ---------- */
+    var $ = function (id) { return document.getElementById(id); };
+    function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+    function q(s) { return String(s).replace(/\\/g, '\\\\').replace(/"/g, '\\"'); }
+    function P(name, fallback) { return 'prop("' + q((name && name.trim()) || fallback) + '")'; }
+    function clampInt(v, lo, hi, def) {
+      var n = parseInt(v, 10);
+      if (isNaN(n)) n = def;
+      return Math.max(lo, Math.min(hi, n));
+    }
+    function num(v, def) { var n = parseFloat(v); return isNaN(n) ? def : n; }
+
+    var UNITS = [['days', 'Days'], ['weeks', 'Weeks'], ['months', 'Months'], ['years', 'Years'], ['hours', 'Hours'], ['minutes', 'Minutes']];
+    var COLORS = [['green', 'Green'], ['blue', 'Blue'], ['red', 'Red'], ['orange', 'Orange'], ['yellow', 'Yellow'], ['purple', 'Purple'], ['pink', 'Pink'], ['brown', 'Brown'], ['gray', 'Gray'],
+                  ['green_background', 'Green background'], ['blue_background', 'Blue background'], ['red_background', 'Red background'], ['orange_background', 'Orange background'],
+                  ['yellow_background', 'Yellow background'], ['purple_background', 'Purple background'], ['gray_background', 'Gray background']];
+    var BAR_STYLES = { block: ['█', '░', '█░ Blocks'], shade: ['▓', '░', '▓░ Shaded'], dot: ['●', '○', '●○ Dots'], square: ['■', '□', '■□ Squares'], slim: ['▰', '▱', '▰▱ Slim'] };
+
+    /* =====================================================
+       TOOL DEFINITIONS
+       ===================================================== */
+    var TOOLS = [
+      {
+        id: 'days-between', icon: '📅', name: 'Date difference',
+        desc: 'Count the days (or weeks, months, years) between two Date properties.',
+        fields: [
+          { id: 'end', label: 'Later date property', type: 'text', def: 'End Date' },
+          { id: 'start', label: 'Earlier date property', type: 'text', def: 'Start Date' },
+          { id: 'unit', label: 'Unit', type: 'select', options: UNITS, def: 'days' },
+          { id: 'abs', label: 'Always show a positive number', type: 'checkbox', def: false }
+        ],
+        build: function (v) {
+          var f = 'dateBetween(' + P(v.end, 'End Date') + ', ' + P(v.start, 'Start Date') + ', "' + v.unit + '")';
+          return v.abs ? 'abs(' + f + ')' : f;
+        },
+        explain: function (v) { return 'Subtracts "' + (v.start || 'Start Date') + '" from "' + (v.end || 'End Date') + '" and returns the whole number of ' + v.unit + '. A negative result means the later date is actually earlier.'; },
+        setup: 'Both properties must be Date properties. Set the formula property to show as a Number.'
+      },
+      {
+        id: 'due-countdown', icon: '⏰', name: 'Due date countdown',
+        desc: 'Show "5 days left", "Due today" or "Overdue by 2 days" from a due date.',
+        fields: [
+          { id: 'due', label: 'Due date property', type: 'text', def: 'Due Date' },
+          { id: 'done', label: 'Checkbox property for "done" (optional)', type: 'text', def: '', hint: 'Leave empty to skip. If checked, the formula shows "Done".' }
+        ],
+        build: function (v) {
+          var due = P(v.due, 'Due Date');
+          var core = 'let(d, dateBetween(' + due + ', today(), "days"), if(empty(' + due + '), "", if(d < 0, "⚠️ Overdue by " + format(abs(d)) + " days", if(d == 0, "Due today", format(d) + " days left"))))';
+          return (v.done && v.done.trim()) ? 'if(' + P(v.done, 'Done') + ', "✅ Done", ' + core + ')' : core;
+        },
+        explain: function () { return 'Stores the days from today to the due date in a variable called d, then picks the right message. Rows with no due date stay blank.'; },
+        setup: 'Due date must be a Date property. The optional "done" property must be a Checkbox.'
+      },
+      {
+        id: 'age-since', icon: '🎂', name: 'Age or time since',
+        desc: 'Work out an age from a birthday, or how long ago something happened.',
+        fields: [
+          { id: 'date', label: 'Date property', type: 'text', def: 'Birthday' },
+          { id: 'unit', label: 'Unit', type: 'select', options: [['years', 'Years'], ['months', 'Months'], ['weeks', 'Weeks'], ['days', 'Days']], def: 'years' }
+        ],
+        build: function (v) { return 'dateBetween(today(), ' + P(v.date, 'Birthday') + ', "' + v.unit + '")'; },
+        explain: function (v) { return 'Counts whole ' + v.unit + ' from "' + (v.date || 'Birthday') + '" up to today. It updates by itself each day.'; },
+        setup: 'The property must be a Date property. Set the formula to show as a Number.'
+      },
+      {
+        id: 'timeline-percent', icon: '📊', name: 'Timeline % complete',
+        desc: 'Show how far today is between a start date and an end date, from 0 to 100.',
+        fields: [
+          { id: 'start', label: 'Start date property', type: 'text', def: 'Start Date' },
+          { id: 'end', label: 'End date property', type: 'text', def: 'End Date' }
+        ],
+        build: function (v) {
+          var s = P(v.start, 'Start Date'), e = P(v.end, 'End Date');
+          return 'let(total, dateBetween(' + e + ', ' + s + ', "days"), if(total <= 0, 0, max(0, min(100, round(dateBetween(today(), ' + s + ', "days") / total * 100)))))';
+        },
+        explain: function () { return 'Divides the days passed since the start by the total days in the project, then limits the result between 0 and 100.'; },
+        setup: 'Both properties must be Date properties. Show the formula as a Number (for a percent look, add a % in the number format).'
+      },
+      {
+        id: 'progress-bar', icon: '🟩', name: 'Progress bar',
+        desc: 'Draw a text progress bar from a Number property, with an optional percentage.',
+        fields: [
+          { id: 'prop', label: 'Progress property', type: 'text', def: 'Progress' },
+          { id: 'scale', label: 'Property value scale', type: 'select', options: [['1', '0 to 1 (percent-formatted Number)'], ['100', '0 to 100 (whole numbers)']], def: '1' },
+          { id: 'len', label: 'Bar length (3 to 30)', type: 'number', def: 10, min: 3, max: 30 },
+          { id: 'style', label: 'Bar style', type: 'select', options: Object.keys(BAR_STYLES).map(function (k) { return [k, BAR_STYLES[k][2]]; }), def: 'block' },
+          { id: 'pct', label: 'Show percentage after the bar', type: 'checkbox', def: true },
+          { id: 'sample', label: 'Preview value (%)', type: 'range', min: 0, max: 100, def: 65, previewOnly: true }
+        ],
+        build: function (v) {
+          var len = clampInt(v.len, 3, 30, 10);
+          var st = BAR_STYLES[v.style] || BAR_STYLES.block;
+          var full = new Array(len + 1).join(st[0]), empty = new Array(len + 1).join(st[1]);
+          var p = P(v.prop, 'Progress');
+          var frac = v.scale === '100' ? p + ' / 100' : p;
+          var pctExpr = v.scale === '100' ? 'round(' + p + ')' : 'round(' + p + ' * 100)';
+          return 'let(filled, max(0, min(' + len + ', round(' + frac + ' * ' + len + '))), slice("' + full + '", 0, filled) + slice("' + empty + '", 0, ' + len + ' - filled)' + (v.pct ? ' + " " + format(' + pctExpr + ') + "%"' : '') + ')';
+        },
+        explain: function (v) { return 'Works out how many of the ' + clampInt(v.len, 3, 30, 10) + ' bar characters should be filled, then joins a slice of filled characters with a slice of empty ones. The value is limited so it never goes past the bar.'; },
+        setup: 'Use a Number property. Format it as "Percent" for the 0 to 1 scale, or as a plain number for the 0 to 100 scale.',
+        preview: function (v) {
+          var len = clampInt(v.len, 3, 30, 10), st = BAR_STYLES[v.style] || BAR_STYLES.block;
+          var filled = Math.max(0, Math.min(len, Math.round(num(v.sample, 0) / 100 * len)));
+          return new Array(filled + 1).join(st[0]) + new Array(len - filled + 1).join(st[1]) + (v.pct ? ' ' + Math.round(num(v.sample, 0)) + '%' : '');
+        }
+      },
+      {
+        id: 'traffic-light', icon: '🚦', name: 'Traffic-light status',
+        desc: 'Turn a score or percentage into a green, amber or red label.',
+        fields: [
+          { id: 'prop', label: 'Number property', type: 'text', def: 'Score' },
+          { id: 'high', label: 'Green at or above', type: 'number', def: 80 },
+          { id: 'mid', label: 'Amber at or above', type: 'number', def: 50 },
+          { id: 'good', label: 'Green label', type: 'text', def: '🟢 On track' },
+          { id: 'ok', label: 'Amber label', type: 'text', def: '🟡 At risk' },
+          { id: 'low', label: 'Red label', type: 'text', def: '🔴 Off track' },
+          { id: 'sample', label: 'Preview score', type: 'range', min: 0, max: 100, def: 62, previewOnly: true }
+        ],
+        build: function (v) {
+          var p = P(v.prop, 'Score');
+          return 'ifs(' + p + ' >= ' + num(v.high, 80) + ', "' + q(v.good) + '", ' + p + ' >= ' + num(v.mid, 50) + ', "' + q(v.ok) + '", "' + q(v.low) + '")';
+        },
+        explain: function () { return 'Checks the score against your green threshold first, then the amber threshold, and falls back to the red label.'; },
+        setup: 'Use a Number property. Keep the green threshold higher than the amber threshold.',
+        preview: function (v) { var s = num(v.sample, 0); return s >= num(v.high, 80) ? v.good : (s >= num(v.mid, 50) ? v.ok : v.low); }
+      },
+      {
+        id: 'format-date', icon: '🗓️', name: 'Format a date',
+        desc: 'Display a date as text in the pattern you prefer.',
+        fields: [
+          { id: 'prop', label: 'Date property', type: 'text', def: 'Date' },
+          { id: 'fmt', label: 'Pattern', type: 'select', options: [
+            ['MMMM D, YYYY', 'January 5, 2026'], ['MMM D', 'Jan 5'], ['DD/MM/YYYY', '05/01/2026'], ['YYYY-MM-DD', '2026-01-05'],
+            ['dddd', 'Monday (weekday)'], ['dddd, MMM D', 'Monday, Jan 5'], ['MMMM YYYY', 'January 2026'], ['hh:mm A', '09:30 AM']], def: 'MMMM D, YYYY' }
+        ],
+        build: function (v) { return 'formatDate(' + P(v.prop, 'Date') + ', "' + v.fmt + '")'; },
+        explain: function (v) { return 'Converts the date into text using the pattern "' + v.fmt + '".'; },
+        setup: 'The property must be a Date property. The result is text, so it cannot be sorted as a date.'
+      },
+      {
+        id: 'status-badge', icon: '🏷️', name: 'Colored status badge',
+        desc: 'Style a property value with color and bold, optionally by a matching value.',
+        fields: [
+          { id: 'prop', label: 'Property to style', type: 'text', def: 'Status' },
+          { id: 'match', label: 'Special value (optional)', type: 'text', def: 'Done', hint: 'When the property equals this value, it gets the first color. Leave empty to apply one color to everything.' },
+          { id: 'c1', label: 'Color for the special value', type: 'select', options: COLORS, def: 'green_background' },
+          { id: 'c2', label: 'Color for everything else', type: 'select', options: COLORS, def: 'gray_background' },
+          { id: 'bold', label: 'Bold text', type: 'checkbox', def: true }
+        ],
+        build: function (v) {
+          var p = P(v.prop, 'Status'), b = v.bold ? '"b", ' : '';
+          if (!v.match || !v.match.trim()) return 'style(' + p + ', ' + b + '"' + v.c1 + '")';
+          return 'if(' + p + ' == "' + q(v.match.trim()) + '", style(' + p + ', ' + b + '"' + v.c1 + '"), style(' + p + ', ' + b + '"' + v.c2 + '"))';
+        },
+        explain: function () { return 'Uses the style function to wrap the property text in bold and a color. With a special value set, it picks one of two colors.'; },
+        setup: 'Works with Select, Status or Text properties.'
+      },
+      {
+        id: 'text-tools', icon: '✏️', name: 'Text cleanup',
+        desc: 'Make a URL slug, count words, shorten text, or build initials.',
+        fields: [
+          { id: 'prop', label: 'Text property', type: 'text', def: 'Name' },
+          { id: 'op', label: 'Operation', type: 'select', options: [['slug', 'URL slug (lowercase-with-dashes)'], ['words', 'Word count'], ['truncate', 'Shorten with ...'], ['initials', 'Initials'], ['upper', 'UPPERCASE']], def: 'slug' },
+          { id: 'n', label: 'Characters to keep (for Shorten)', type: 'number', def: 40, min: 1, max: 500 }
+        ],
+        build: function (v) {
+          var p = P(v.prop, 'Name'), n = clampInt(v.n, 1, 500, 40);
+          switch (v.op) {
+            case 'words': return 'if(empty(' + p + '), 0, length(split(trim(' + p + '), " ")))';
+            case 'truncate': return 'if(length(' + p + ') > ' + n + ', slice(' + p + ', 0, ' + n + ') + "…", ' + p + ')';
+            case 'initials': return 'join(map(split(trim(' + p + '), " "), upper(slice(current, 0, 1))), "")';
+            case 'upper': return 'upper(' + p + ')';
+            default: return 'lower(replaceAll(replaceAll(trim(' + p + '), "[^A-Za-z0-9 ]", ""), " +", "-"))';
+          }
+        },
+        explain: function (v) {
+          var m = { slug: 'Removes punctuation, replaces spaces with dashes and lowercases the text.', words: 'Splits the text on spaces and counts the pieces. Empty text returns 0.', truncate: 'Cuts the text after the number of characters you chose and adds an ellipsis only when something was removed.', initials: 'Splits the text into words and keeps the first letter of each in capitals.', upper: 'Converts the whole text to capital letters.' };
+          return m[v.op];
+        },
+        setup: 'Works with Text (Title) properties. Word count assumes words are separated by single spaces.'
+      },
+      {
+        id: 'relation-done', icon: '✅', name: 'Relation % done',
+        desc: 'Show the percentage of related tasks that are finished.',
+        fields: [
+          { id: 'rel', label: 'Relation property', type: 'text', def: 'Tasks' },
+          { id: 'kind', label: 'A task counts as done when', type: 'select', options: [['value', 'A Select/Status property equals a value'], ['check', 'A Checkbox property is checked']], def: 'value' },
+          { id: 'field', label: 'Property inside the related database', type: 'text', def: 'Status' },
+          { id: 'val', label: 'Done value (for Select/Status)', type: 'text', def: 'Done' }
+        ],
+        build: function (v) {
+          var rel = P(v.rel, 'Tasks'), f = P(v.field, 'Status');
+          var cond = v.kind === 'check' ? 'current.' + f : 'current.' + f + ' == "' + q((v.val || 'Done').trim()) + '"';
+          return 'if(empty(' + rel + '), 0, round(' + rel + '.filter(' + cond + ').length() / ' + rel + '.length() * 100))';
+        },
+        explain: function () { return 'Filters the related rows down to the finished ones, divides by the total related rows, and returns a whole percentage. No related rows returns 0.'; },
+        setup: 'Needs a Relation property. The "inside the related database" property is read from each related row.'
+      }
+    ];
+    /* END TOOLS */
+
+    /* =====================================================
+       UI ENGINE
+       ===================================================== */
+    var current = TOOLS[0];
+    var lastFormula = '';
+
+    function renderTabs() {
+      $('tool-tabs').innerHTML = TOOLS.map(function (t) {
+        var on = t.id === current.id;
+        return '<button type="button" data-tool="' + t.id + '" aria-pressed="' + on + '" class="px-3 py-2 rounded-xl border text-sm font-semibold ' +
+          (on ? 'bg-indigo-600 border-indigo-600 text-white' : 'bg-white border-slate-200 text-slate-700 hover:border-indigo-400') + '"><span aria-hidden="true">' + t.icon + '</span> ' + esc(t.name) + '</button>';
+      }).join('');
+    }
+
+    function renderForm() {
+      $('tool-desc').textContent = current.desc;
+      $('tool-form').innerHTML = current.fields.map(function (f) {
+        var id = 'f-' + f.id, hint = f.hint ? '<p class="mt-1 text-xs text-slate-500">' + esc(f.hint) + '</p>' : '';
+        var inputCls = 'mt-1 w-full rounded-xl border border-slate-300 px-3 py-2.5 focus:border-indigo-500 focus:ring-indigo-500 bg-white';
+        if (f.type === 'checkbox') {
+          return '<label class="flex items-start gap-2 text-sm text-slate-700 cursor-pointer"><input id="' + id + '" type="checkbox" class="mt-1 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500"' + (f.def ? ' checked' : '') + '><span>' + esc(f.label) + '</span></label>';
+        }
+        if (f.type === 'select') {
+          return '<div><label for="' + id + '" class="text-sm font-semibold text-slate-900">' + esc(f.label) + '</label><select id="' + id + '" class="' + inputCls + '">' +
+            f.options.map(function (o) { return '<option value="' + esc(o[0]) + '"' + (o[0] === f.def ? ' selected' : '') + '>' + esc(o[1]) + '</option>'; }).join('') + '</select>' + hint + '</div>';
+        }
+        if (f.type === 'range') {
+          return '<div><label for="' + id + '" class="text-sm font-semibold text-slate-900">' + esc(f.label) + ': <span id="' + id + '-val" class="text-indigo-700">' + f.def + '</span></label><input id="' + id + '" type="range" min="' + f.min + '" max="' + f.max + '" value="' + f.def + '" class="mt-2 w-full"></div>';
+        }
+        var extra = f.type === 'number' ? ' inputmode="numeric"' + (f.min != null ? ' min="' + f.min + '"' : '') + (f.max != null ? ' max="' + f.max + '"' : '') : '';
+        return '<div><label for="' + id + '" class="text-sm font-semibold text-slate-900">' + esc(f.label) + '</label><input id="' + id + '" type="' + (f.type === 'number' ? 'number' : 'text') + '"' + extra + ' value="' + esc(f.def) + '" class="' + inputCls + '">' + hint + '</div>';
+      }).join('');
+    }
+
+    function readValues() {
+      var v = {};
+      current.fields.forEach(function (f) {
+        var el = $('f-' + f.id);
+        if (!el) { v[f.id] = f.def; return; }
+        v[f.id] = f.type === 'checkbox' ? el.checked : el.value;
+      });
+      return v;
+    }
+
+    function update() {
+      var v = readValues();
+      current.fields.forEach(function (f) {
+        if (f.type === 'range') { var out = $('f-' + f.id + '-val'); if (out) out.textContent = v[f.id]; }
+      });
+      lastFormula = current.build(v);
+      var out = $('formula-out');
+      out.textContent = lastFormula;
+      out.classList.remove('fade-in'); void out.offsetWidth; out.classList.add('fade-in');
+      $('explain-out').textContent = current.explain(v);
+      $('setup-out').textContent = current.setup;
+      var pb = $('preview-box');
+      if (current.preview) { $('preview-out').textContent = current.preview(v); pb.classList.remove('hidden'); }
+      else { pb.classList.add('hidden'); }
+    }
+
+    function selectTool(id, pushHash) {
+      var t = TOOLS.filter(function (x) { return x.id === id; })[0];
+      if (!t) return;
+      current = t;
+      if (pushHash && history.replaceState) { try { history.replaceState(null, '', '#' + id); } catch (e) {} }
+      $('copy-status').textContent = '';
+      renderTabs(); renderForm(); update();
+    }
+
+    /* ---------- events ---------- */
+    $('tool-tabs').addEventListener('click', function (e) {
+      var b = e.target.closest('button[data-tool]');
+      if (b) selectTool(b.getAttribute('data-tool'), true);
+    });
+    $('tool-form').addEventListener('input', update);
+    $('tool-form').addEventListener('change', update);
+    $('tool-form').addEventListener('submit', function (e) { e.preventDefault(); });
+
+    $('copy-btn').addEventListener('click', function () {
+      var status = $('copy-status');
+      function done(ok) {
+        status.textContent = ok ? 'Formula copied. Paste it into the Notion formula editor.' : 'Could not copy automatically. Select the formula and copy it manually.';
+        setTimeout(function () { status.textContent = ''; }, 3000);
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(lastFormula).then(function () { done(true); }, function () { done(false); });
+      } else {
+        var ta = document.createElement('textarea');
+        ta.value = lastFormula; document.body.appendChild(ta); ta.select();
+        try { done(document.execCommand('copy')); } catch (err) { done(false); }
+        document.body.removeChild(ta);
+      }
+    });
+
+    window.addEventListener('hashchange', function () { selectTool(location.hash.replace('#', ''), false); });
+
+    // Mobile menu + year
+    var btn = $('menu-btn'), menu = $('mobile-menu');
+    btn.addEventListener('click', function () {
+      var open = menu.classList.toggle('hidden') === false;
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    $('year').textContent = new Date().getFullYear();
+
+    // Init (supports deep links like /notion-formula/#progress-bar)
+    var initial = location.hash.replace('#', '');
+    var known = TOOLS.some(function (t) { return t.id === initial; });
+    if (known) { current = TOOLS.filter(function (t) { return t.id === initial; })[0]; }
+    renderTabs(); renderForm(); update();
+  })();
+  </script>
+</body>
+</html>
