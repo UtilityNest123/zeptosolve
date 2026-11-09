@@ -149,11 +149,6 @@
     <!-- AdSense Top Banner Here -->
     <div class="max-w-6xl mx-auto px-4 mt-6">
       <div class="ad-slot flex items-center justify-center rounded-lg border border-dashed border-slate-300 bg-slate-100 text-xs text-slate-400" aria-label="Advertisement">
-        <!-- AdSense Top Banner Here (728x90 / responsive) -->
-        <!--
-        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="0000000001" data-ad-format="auto" data-full-width-responsive="true"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-        -->
         Ad Space: Top Banner
       </div>
     </div>
@@ -166,6 +161,18 @@
 
         <!-- ---------- FORM ---------- -->
         <form id="tax-form" class="lg:col-span-3 bg-white rounded-2xl border border-slate-200 p-5 md:p-7 space-y-6" novalidate autocomplete="off">
+
+          <!-- Assessment Year Selector -->
+          <div>
+            <label for="ay-select" class="text-sm font-semibold text-slate-900">Select Assessment Year (করবর্ষ)</label>
+            <select id="ay-select" class="mt-2 w-full rounded-xl border border-slate-300 px-3 py-3 bg-white font-medium text-emerald-800 focus:border-emerald-500 focus:ring-emerald-500">
+              <option value="2026-27" selected>AY 2026-27 (Current)</option>
+              <option value="2025-26">AY 2025-26</option>
+              <option value="2024-25">AY 2024-25</option>
+              <option value="2023-24">AY 2023-24</option>
+              <option value="2022-23">AY 2022-23</option>
+            </select>
+          </div>
 
           <!-- Income type -->
           <fieldset>
@@ -289,7 +296,6 @@
 
             <!-- AdSense Sidebar / In-Result Banner Here -->
             <div class="ad-slot flex items-center justify-center rounded-lg border border-dashed border-slate-300 bg-slate-100 text-xs text-slate-400" style="min-height:250px" aria-label="Advertisement">
-              <!-- AdSense Sidebar Rectangle Here (300x250) -->
               Ad Space: Result Sidebar
             </div>
           </div>
@@ -319,7 +325,6 @@
     <!-- AdSense Mid-Content Banner Here -->
     <div class="max-w-6xl mx-auto px-4">
       <div class="ad-slot flex items-center justify-center rounded-lg border border-dashed border-slate-300 bg-slate-100 text-xs text-slate-400" aria-label="Advertisement">
-        <!-- AdSense Mid-Content Banner Here (responsive / in-article) -->
         Ad Space: Mid Content
       </div>
     </div>
@@ -419,7 +424,6 @@
     <!-- AdSense Bottom Banner Here -->
     <div class="max-w-6xl mx-auto px-4 mb-8">
       <div class="ad-slot flex items-center justify-center rounded-lg border border-dashed border-slate-300 bg-slate-100 text-xs text-slate-400" aria-label="Advertisement">
-        <!-- AdSense Bottom Banner Here -->
         Ad Space: Bottom Banner
       </div>
     </div>
@@ -457,25 +461,81 @@
     'use strict';
 
     /* =====================================================
-       TAX CONFIG – edit here when NBR rules change
+       MULTI-YEAR TAX CONFIG – official NBR & Finance Acts
        ===================================================== */
-    var CONFIG = {
-      assessmentYear: '2026-27',
-      thresholds: { general: 400000, woman: 450000 },
-      // Layers taxed AFTER the tax-free threshold
-      slabs: [
-        { width: 300000,   rate: 0.10 },
-        { width: 400000,   rate: 0.15 },
-        { width: 500000,   rate: 0.20 },
-        { width: 2000000,  rate: 0.25 },
-        { width: Infinity, rate: 0.30 }
-      ],
-      minTax: { regular: 5000, firstTime: 1000 },
-      rebate: {
-        incomeShareCap: 0.03, // rebate never exceeds 3% of taxable income
-        classic: { rate: 0.15, investmentShare: 0.20, maxRebate: 1000000 },
-        reduced: { rate: 0.10, investmentShare: 0.30, maxRebate: 750000 }
+    var YEAR_CONFIGS = {
+      '2026-27': {
+        thresholds: { general: 400000, woman: 450000 },
+        exemptCap: 450000,
+        slabs: [
+          { width: 300000,   rate: 0.10 },
+          { width: 400000,   rate: 0.15 },
+          { width: 500000,   rate: 0.20 },
+          { width: 2000000,  rate: 0.25 },
+          { width: Infinity, rate: 0.30 }
+        ],
+        minTax: { regular: 5000, firstTime: 1000 },
+        rebateRule: 'reduced'
+      },
+      '2025-26': {
+        thresholds: { general: 375000, woman: 425000 },
+        exemptCap: 450000,
+        slabs: [
+          { width: 300000,   rate: 0.10 },
+          { width: 400000,   rate: 0.15 },
+          { width: 500000,   rate: 0.20 },
+          { width: 2000000,  rate: 0.25 },
+          { width: Infinity, rate: 0.30 }
+        ],
+        minTax: { regular: 5000, firstTime: 1000 },
+        rebateRule: 'reduced'
+      },
+      '2024-25': {
+        thresholds: { general: 350000, woman: 400000 },
+        exemptCap: 450000,
+        slabs: [
+          { width: 100000,   rate: 0.05 },
+          { width: 300000,   rate: 0.10 },
+          { width: 400000,   rate: 0.15 },
+          { width: 500000,   rate: 0.20 },
+          { width: 2000000,  rate: 0.25 },
+          { width: Infinity, rate: 0.30 }
+        ],
+        minTax: { regular: 5000, firstTime: 5000 },
+        rebateRule: 'classic'
+      },
+      '2023-24': {
+        thresholds: { general: 350000, woman: 400000 },
+        exemptCap: 450000,
+        slabs: [
+          { width: 100000,   rate: 0.05 },
+          { width: 300000,   rate: 0.10 },
+          { width: 400000,   rate: 0.15 },
+          { width: 500000,   rate: 0.20 },
+          { width: Infinity, rate: 0.25 }
+        ],
+        minTax: { regular: 5000, firstTime: 5000 },
+        rebateRule: 'classic'
+      },
+      '2022-23': {
+        thresholds: { general: 300000, woman: 350000 },
+        exemptCap: 450000,
+        slabs: [
+          { width: 100000,   rate: 0.05 },
+          { width: 300000,   rate: 0.10 },
+          { width: 400000,   rate: 0.15 },
+          { width: 500000,   rate: 0.20 },
+          { width: Infinity, rate: 0.25 }
+        ],
+        minTax: { regular: 5000, firstTime: 5000 },
+        rebateRule: 'classic'
       }
+    };
+
+    var REBATE_CONFIG = {
+      incomeShareCap: 0.03, // rebate never exceeds 3% of taxable income
+      classic: { rate: 0.15, investmentShare: 0.20, maxRebate: 1000000 },
+      reduced: { rate: 0.10, investmentShare: 0.30, maxRebate: 750000 }
     };
 
     /* ---------- helpers ---------- */
@@ -511,8 +571,19 @@
     var period = 'year';
     var lastSummary = '';
 
+    /* ---------- update dropdown labels for active year ---------- */
+    function applyYearRules(ay) {
+      var cfg = YEAR_CONFIGS[ay];
+      var cat = $('category');
+      cat.options[0].textContent = 'General taxpayer (tax-free up to ' + taka(cfg.thresholds.general) + ')';
+      cat.options[1].textContent = 'Woman or senior citizen 65+ (tax-free up to ' + taka(cfg.thresholds.woman) + ')';
+      $('exempt-cap').value = fmt.format(cfg.exemptCap);
+      $('rebate-rule').value = cfg.rebateRule;
+    }
+
     /* ---------- core calculation ---------- */
     function calculate(state) {
+      var cfg = YEAR_CONFIGS[state.ay];
       var income = state.income;
       var exempt = 0;
       var taxable = income;
@@ -524,7 +595,7 @@
 
       var threshold = state.category === 'custom'
         ? state.customThreshold
-        : CONFIG.thresholds[state.category];
+        : cfg.thresholds[state.category];
 
       var rows = [];
       rows.push({
@@ -537,7 +608,7 @@
       var remaining = Math.max(0, taxable - threshold);
       var slabTax = 0;
       var lower = threshold;
-      CONFIG.slabs.forEach(function (s) {
+      cfg.slabs.forEach(function (s) {
         var take = Math.min(remaining, s.width);
         var tax = take * s.rate;
         var upper = s.width === Infinity ? null : lower + s.width;
@@ -555,14 +626,14 @@
       // Investment rebate
       var rebate = 0;
       if (state.investment > 0 && slabTax > 0) {
-        var rule = CONFIG.rebate[state.rebateRule];
+        var rule = REBATE_CONFIG[state.rebateRule];
         var eligible = Math.min(state.investment, rule.investmentShare * taxable);
-        rebate = Math.min(rule.rate * eligible, CONFIG.rebate.incomeShareCap * taxable, rule.maxRebate, slabTax);
+        rebate = Math.min(rule.rate * eligible, REBATE_CONFIG.incomeShareCap * taxable, rule.maxRebate, slabTax);
       }
       var afterRebate = Math.max(0, slabTax - rebate);
 
       var overThreshold = taxable > threshold;
-      var minTax = state.firstTime ? CONFIG.minTax.firstTime : CONFIG.minTax.regular;
+      var minTax = state.firstTime ? cfg.minTax.firstTime : cfg.minTax.regular;
       var minApplied = overThreshold && afterRebate < minTax;
       var total = overThreshold ? Math.max(afterRebate, minTax) : 0;
 
@@ -572,7 +643,7 @@
         income: income, exempt: exempt, taxable: taxable, threshold: threshold,
         rows: rows, slabTax: slabTax, rebate: rebate, afterRebate: afterRebate,
         overThreshold: overThreshold, minTax: minTax, minApplied: minApplied,
-        total: total, balance: balance, tds: state.tds
+        total: total, balance: balance, tds: state.tds, ay: state.ay
       };
     }
 
@@ -581,6 +652,7 @@
       var raw = parseNum($('income').value);
       var annual = period === 'month' ? raw * 12 : raw;
       return {
+        ay: $('ay-select').value,
         mode: document.querySelector('input[name="mode"]:checked').value,
         income: annual,
         exemptCap: parseNum($('exempt-cap').value),
@@ -608,7 +680,7 @@
       else if (state.category === 'custom' && !state.customThreshold) note = 'Enter your tax-free threshold below to continue.';
       else if (!r.overThreshold) note = 'Your taxable income is within the tax-free limit. No tax is due.';
       else if (r.minApplied) note = 'Minimum tax of ' + taka(r.minTax) + ' applied.';
-      else note = 'Calculated on AY ' + CONFIG.assessmentYear + ' slabs.';
+      else note = 'Calculated on AY ' + r.ay + ' slabs.';
       $('res-note').textContent = note;
 
       // Extra lines
@@ -648,7 +720,7 @@
 
       // Summary text for copy
       lastSummary =
-        'ZeptoSolve - Bangladesh Income Tax Estimate (AY ' + CONFIG.assessmentYear + ')\n' +
+        'ZeptoSolve - Bangladesh Income Tax Estimate (AY ' + r.ay + ')\n' +
         'Annual income: ' + taka(r.income) + '\n' +
         (state.mode === 'salary' ? 'Exempt salary: ' + taka(r.exempt) + '\n' : '') +
         'Taxable income: ' + taka(r.taxable) + '\n' +
@@ -676,6 +748,11 @@
     Array.prototype.forEach.call(document.querySelectorAll('input[name="mode"]'), function (el) { el.addEventListener('change', run); });
     $('tax-form').addEventListener('submit', function (e) { e.preventDefault(); });
 
+    $('ay-select').addEventListener('change', function () {
+      applyYearRules(this.value);
+      run();
+    });
+
     function setPeriod(p) {
       period = p;
       var y = $('period-year'), m = $('period-month');
@@ -690,9 +767,11 @@
 
     $('reset-btn').addEventListener('click', function () {
       $('tax-form').reset();
-      $('exempt-cap').value = '4,50,000';
+      $('ay-select').value = '2026-27';
+      applyYearRules('2026-27');
       setPeriod('year');
       $('copy-status').textContent = '';
+      run();
     });
 
     $('copy-btn').addEventListener('click', function () {
@@ -716,6 +795,8 @@
     });
     $('year').textContent = new Date().getFullYear();
 
+    // Init
+    applyYearRules('2026-27');
     run();
   })();
   </script>
